@@ -1,0 +1,52 @@
+[tool.poetry]
+name = "poverse"
+version = "0.1.0"
+description = "Get the installed version of dependency within poetry.lock file"
+authors = ["Joel Clemence"]
+license = "MIT"
+
+keywords = [
+    "Poetry",
+    "dependencies"
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Topic :: Software Development :: Build Tools",
+    "Typing :: Typed"
+]
+
+homepage = "https://github.com/JoelClemence/poverse"
+repository = "https://github.com/JoelClemence/poverse"
+
+readme = "README.md"
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/JoelClemence/poverse/issues"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+click = "^7.1.2"
+toml = "^0.10.2"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.2"
+black = "^20.8b1"
+isort = "^5.8.0"
+flake8 = "^3.9.0"
+mypy = "^0.812"
+bandit = "^1.7.0"
+
+[tool.poetry.scripts]
+poverse = "poverse.cli:cli"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

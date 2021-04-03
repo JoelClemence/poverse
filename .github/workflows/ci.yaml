@@ -1,0 +1,33 @@
+on: [push]
+
+jobs:
+  ci:
+    name: ci
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: [ 3.7, 3.8, 3.9 ]
+        poetry-version: [ 1.1.5 ]
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python-version }} 
+    - name: Setup Poetry ${{ matrix.poetry-version }}
+      uses: abatilo/actions-poetry@v2.0.0
+      with:
+        poetry-version: ${{ matrix.poetry-version }}
+    - name: Install dependencies
+      run: poetry install
+    - name: Lint check
+      run: |
+        poetry run isort --profile black --check-only poverse tests
+        poetry run black --check --diff poverse tests
+        poetry run mypy --ignore-missing-imports poverse tests
+    - name: SAST
+      run: poetry run bandit -r poverse
+    - name: Test
+      run: poetry run pytest
+    
