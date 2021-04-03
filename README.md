@@ -4,7 +4,7 @@
 
 Supports python versions >=3.7, <=3.9
 
-## Imstallation
+## Installation
 
 ```sh
 $ pip install poverse
@@ -54,6 +54,8 @@ from the poetry lock.
 #### Examples
 
 ```python
+from poverse import get_installed_version
+
 get_installed_version("boto3") # Get the installed version of boto3 from project's poetry.lock
 
 get_installed_version("boto3", "/home/user/projects/project/poetry.lock") # Get the installed version of boto3 from the poetry lock supplied
