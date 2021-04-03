@@ -4,6 +4,8 @@ on:
     types:
     - published
 
+name: CI/CD
+
 jobs:
   ci:
     name: ci

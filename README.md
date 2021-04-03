@@ -4,6 +4,9 @@
 
 Supports python versions >=3.7, <=3.9
 
+[![.github/workflows/ci.yaml](https://github.com/JoelClemence/poverse/actions/workflows/ci.yaml/badge.svg)](https://github.com/JoelClemence/poverse/actions/workflows/ci.yaml)
+[![PyPI version](https://badge.fury.io/py/poverse.svg)](https://pypi.org/project/poverse/)
+
 ## Installation
 
 ```sh
