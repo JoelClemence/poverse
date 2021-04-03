@@ -22,7 +22,7 @@ jobs:
     - name: Install dependencies
       run: poetry install
     - name: Lint check
-      run: >
+      run: |
         poetry run isort --profile black --check-only poverse tests
         poetry run black --check --diff poverse tests
         poetry run mypy --ignore-missing-imports poverse tests
