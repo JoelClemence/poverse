@@ -5,6 +5,32 @@ description = "Get the installed version of dependency within poetry.lock file"
 authors = ["Joel Clemence"]
 license = "MIT"
 
+keywords = [
+    "Poetry",
+    "dependencies"
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Topic :: Software Development :: Build Tools",
+    "Typing :: Typed"
+]
+
+homepage = "https://github.com/JoelClemence/poverse"
+repository = "https://github.com/JoelClemence/poverse"
+
+readme = "README.md"
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/JoelClemence/poverse/issues"
+
 [tool.poetry.dependencies]
 python = "^3.7"
 click = "^7.1.2"
