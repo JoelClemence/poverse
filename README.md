@@ -47,7 +47,7 @@ from the poetry lock.
 
 **Params:**
 - `package_name` (_**required**, str_): name of the package that could be in the lock file (required)
-- `lock_file_path` (_str_): path to `poetry.lock` file. Defaults to a `poetry.lock` in in the current directory.
+- `lock_file_path` (_str_): path to `poetry.lock` file. Defaults to a `poetry.lock` in the current directory.
 
 **Returns:** _Optional[str]_ - Version of requested dependency, `None` if package does not exist.
 
