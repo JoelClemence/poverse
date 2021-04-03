@@ -17,7 +17,8 @@ def get_installed_version(
 
     Params:
         package_name: name of the package that could be in the lock file (required)
-        lock_file_path: path to `poetry.lock` file
+        lock_file_path: path to `poetry.lock` file. Defaults to a `poetry.lock` in
+            in the current directory.
     """
     __validate_args(package_name, lock_file_path)
 
