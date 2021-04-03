@@ -48,7 +48,7 @@ def test_echos_version_of_package_supplied(
 
     result = cli_runner.invoke(cli, ["-p", "myawesomepackage"])
 
-    assert "0.1.1" == result.output.strip()
+    assert result.output.strip() == "0.1.1"
 
 
 def test_returns_error_exit_code_when_exception_raised(
