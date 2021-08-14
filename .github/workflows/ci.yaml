@@ -53,7 +53,7 @@ jobs:
       with:
         poetry-version: 1.1.5
     - name: Install dependencies
-      run: poetry install
+      run: poetry install --no-dev
     - name: Publish pip package
       run: |
         poetry build
